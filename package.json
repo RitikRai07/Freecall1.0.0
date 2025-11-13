@@ -3,10 +3,9 @@
   "private": true,
   "scripts": {
     "dev": "npm --prefix ./freecall run dev",
-    "build": "npm --prefix ./freecall run build",
+    "build": "npm --prefix ./freecall install && npm --prefix ./freecall run build",
     "preview": "npm --prefix ./freecall run preview"
   },
-  "postinstall": "npm --prefix ./freecall install",
   "engines": {
     "node": "22.x"
   }

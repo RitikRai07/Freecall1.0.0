@@ -1,6 +1,6 @@
 {
   "buildCommand": "npm run build",
-  "installCommand": "npm install",
+  "installCommand": "npm install && npm --prefix ./freecall install",
   "outputDirectory": "freecall/dist",
   "routes": [
     {
