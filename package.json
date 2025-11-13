@@ -1,0 +1,13 @@
+{
+  "name": "meet-root",
+  "private": true,
+  "scripts": {
+    "dev": "cd freecall ; npm run dev",
+    "build": "cd freecall ; npm run build",
+    "preview": "cd freecall ; npm run preview"
+  },
+  "postinstall": "cd freecall ; npm install",
+  "engines": {
+    "node": "18.x"
+  }
+}
