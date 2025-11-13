@@ -69,16 +69,23 @@ function VideoRoom() {
                          userName
                     );
                     const zp = ZegoUIKitPrebuilt.create(kitToken);
+
+                    // Use the current origin so shared links work on any deployed Vercel domain.
+                    // Fallback to the known onemeet domain if `window` is not available.
+                    const origin = (typeof window !== 'undefined' && window.location && window.location.origin)
+                         ? window.location.origin
+                         : 'https://onemeet.vercel.app';
+
                     zp.joinRoom({
                          container: containerRef.current,
                          sharedLinks: [
                               {
                                    name: 'Personal link',
-                                   url: `http://onemeet.vercel.app/room/${roomID}`,
+                                   url: `${origin}/room/${roomID}`,
                               },
                          ],
                          scenario: {
-                              mode: ZegoUIKitPrebuilt.OneONoneCall,
+                              mode: ZegoUIKitPrebuilt.OneONOneCall,
                          },
                     });
                     
