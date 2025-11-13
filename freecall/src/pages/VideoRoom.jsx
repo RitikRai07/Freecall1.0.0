@@ -74,7 +74,7 @@ function VideoRoom() {
                          sharedLinks: [
                               {
                                    name: 'Personal link',
-                                   url: `http://localhost:5174/room/${roomID}`,
+                                   url: `http://onemeet.vercel.app/room/${roomID}`,
                               },
                          ],
                          scenario: {
