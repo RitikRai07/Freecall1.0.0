@@ -1,11 +1,7 @@
 {
-  "builds": [
-    {
-      "src": "freecall/package.json",
-      "use": "@vercel/static-build",
-      "config": { "distDir": "dist" }
-    }
-  ],
+  "buildCommand": "npm run build",
+  "installCommand": "npm install",
+  "outputDirectory": "freecall/dist",
   "routes": [
     {
       "src": "^/(?!.*\\.).*$",
