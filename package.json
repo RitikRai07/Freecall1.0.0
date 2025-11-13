@@ -2,11 +2,11 @@
   "name": "meet-root",
   "private": true,
   "scripts": {
-    "dev": "cd freecall ; npm run dev",
-    "build": "cd freecall ; npm run build",
-    "preview": "cd freecall ; npm run preview"
+    "dev": "npm --prefix ./freecall run dev",
+    "build": "npm --prefix ./freecall run build",
+    "preview": "npm --prefix ./freecall run preview"
   },
-  "postinstall": "cd freecall ; npm install",
+  "postinstall": "npm --prefix ./freecall install",
   "engines": {
     "node": "18.x"
   }
